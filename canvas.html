@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Canvas Example</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#4af7af";
+        ctx.beginPath(); // Start a new path
+        ctx.arc(85, 50, 40, 0, Math.PI * 2); // Draw a circle at (85, 50) with radius 40
+        ctx.fill(); // Fill the circle with the current fill color
+    </script>
+</body>
+</html>

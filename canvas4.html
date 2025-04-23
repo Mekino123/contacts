@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Canvas Example</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.addEventListener("click", function (event) {
+            const x = event.clientX - canvas.offsetLeft;
+            const y = event.clientY - canvas.offsetTop;
+        
+
+              // Draw a circle where the user clicked
+            ctx.beginPath();
+            ctx.arc(x, y, 10, 0, 2 * Math.PI);
+            ctx.fillStyle = "orange";
+            ctx.fill();
+        })
+    </script>
+</body>
+</html>
